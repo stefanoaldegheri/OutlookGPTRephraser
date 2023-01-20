@@ -4,8 +4,8 @@
   <Version>1.0.0.0</Version>
   <ProviderName>Stefano Aldegheri</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Outlook Rephraser"/>
-  <Description DefaultValue="A tool to rephrase text in different styles"/>
+  <DisplayName DefaultValue="GPT Rephraser"/>
+  <Description DefaultValue="A tool to rephrase text in different formats"/>
   <IconUrl DefaultValue="https://stefanoaldegheri.github.io/OutlookGPTRephraser/assets/icon-64.png"/>
   <HighResolutionIconUrl DefaultValue="https://stefanoaldegheri.github.io/OutlookGPTRephraser/assets/icon-128.png"/>
   <SupportUrl DefaultValue="https://stefanoaldegheri.github.io/OutlookGPTRephraser"/>
@@ -77,8 +77,8 @@
         <bt:Url id="Taskpane.Url" DefaultValue="https://stefanoaldegheri.github.io/OutlookGPTRephraser/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GroupLabel" DefaultValue="Rephraser"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Rephraser"/>
+        <bt:String id="GroupLabel" DefaultValue="GPT Rephraser"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Text"/>
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Opens text rephrasing panel"/>
