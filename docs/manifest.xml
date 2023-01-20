@@ -77,8 +77,8 @@
         <bt:Url id="Taskpane.Url" DefaultValue="https://stefanoaldegheri.github.io/OutlookGPTRephraser/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GroupLabel" DefaultValue="GPT Rephraser"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Text"/>
+        <bt:String id="GroupLabel" DefaultValue="Text"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="GPT Rephraser"/>
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Opens text rephrasing panel"/>
