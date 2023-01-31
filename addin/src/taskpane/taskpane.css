@@ -1,0 +1,163 @@
+/*
+  Copyright (c) 2023 Stefano Aldegheri
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+*/
+
+body {
+  background-color: #fff;
+  font-family: "Segoe UI", "Leelawadee UI", sans-serif;
+}
+
+.wrapperGPT {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tabButtonGPT {
+  display: none;
+}
+
+.lblButtonGPT {
+  background: #eee;
+  border: 1px solid #ddd;
+  padding: .5em 1em;
+  cursor: pointer;
+  order: 1;
+}
+
+.lblChecked
+{
+border-bottom: 1px solid black;
+background: #fff;
+}
+
+.tabcontentEx {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1px;
+
+  padding: 1em;
+  border: 1px solid #ddd;
+  background: #fff;
+  order: 2;
+
+}
+
+.input-group {
+  display: flex;
+  column-gap: 1em;
+  margin-top: 20px;
+}
+
+.rephrased-text-output {
+  margin-top: 20px;
+  width: 95%;
+  border: 1px solid #ddd;
+}
+
+.lblWordWrap
+{
+  word-wrap: break-word;
+}
+
+.button-group {
+  margin-top: 20px;
+}
+
+.button-8 {
+  background-color: #e1ecf4;
+  border-radius: 3px;
+  border: 1px solid #7aa7c7;
+  box-shadow: rgba(255, 255, 255, 0.7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #39739d;
+  cursor: pointer;
+  display: inline-block;
+  /* font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif; */
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px 0.8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button-8:hover,
+.button-8:focus {
+  background-color: #b3d3ea;
+  color: #2c5777;
+}
+
+.button-8:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+}
+
+.button-8:active {
+  background-color: #a0c7e4;
+  box-shadow: none;
+  color: #2c5777;
+}
+
+.boxOptionsGPT {
+  display: flex;
+  row-gap: 10px;
+
+  flex-direction: column;
+ 
+  width: 100%;
+  max-width: 400px;
+}
+
+.optionsElement
+{
+  display: flex;
+  column-gap: 1em;
+}
+
+.optionsElement > * {
+  flex: 1;
+}
+
+.optElLeft
+{
+text-align: right;
+
+}
+
+.optionsTitle
+{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.optionsGroup{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+

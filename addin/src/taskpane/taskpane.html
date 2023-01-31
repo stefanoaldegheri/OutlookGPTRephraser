@@ -1,0 +1,119 @@
+<!--
+  Copyright (c) 2023 Stefano Aldegheri
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GPT Rephraser</title>
+
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+    <link rel="stylesheet"
+        href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css" />
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="wrapperGPT">
+        <input type="radio" id="tbBtnRephrase" class="tabButtonGPT" />
+        <label id="tbLblRephrase" for="tbBtnRephrase" class="lblButtonGPT">Rephrase</label>
+        <input type="radio" id="tbBtnOptions" class="tabButtonGPT" />
+        <label id="tbLblOptions" for="tbBtnOptions" class="lblButtonGPT">Options</label>
+    </div>
+
+    <div id="Rephraser" class="tabcontent tabcontentEx">
+        <div class="input-group">
+            <label id="lblFormat" for="txtFormat">Rephrase selected text like a</label>
+            <input id="txtFormat" list="formatoptions" name="formatoptions" placeholder="Insert a format" />
+            <datalist id="formatoptions">
+                <option value="journalist"></option>
+                <option value="engineer"></option>
+                <option value="friend"></option>
+            </datalist>
+        </div>
+        <div class="button-group">
+            <button class="button-8" id="run">Rephrase</button>
+        </div>
+        <div class="rephrased-text-output">
+            <p><label id="lblRephrasedText">Click 'Rephrase' to transform selected text</label></p>
+        </div>
+        <div class="button-group">
+            <button class="button-8" id="btnSubstituteSelectionInMail">Replace Selection</button>
+        </div>
+    </div>
+
+
+    <div id="Options" class="tabcontent tabcontentEx">
+        <div class="boxOptionsGPT">
+            <div class="optionsTitle">Rephrasing options</div>
+            <div class="optionsElement">
+                <label class="optElLeft" for="txtAPIKEY">OpenAI GPT Key:</label>
+                <input type="text" id="txtAPIKEY" name="txtAPIKEY"
+                    title="The OPENAI GPT key found in the personal settings" />
+            </div>
+            <div class="optionsElement">
+                <label class="optElLeft" for="cmbLanguage">Use Language:</label>
+                <select id="cmbLanguage" name="cmbLanguage" title="The language to use in the output">
+                    <option value="english">English</option>
+                    <option value="spanish">Spanish</option>
+                    <option value="french">French</option>
+                    <option value="german">German</option>
+                    <option value="italian">Italian</option>
+                    <option value="chinese">Chinese</option>
+                    <option value="japanese">Japanese</option>
+                    <option value="korean">Korean</option>
+                    <option value="portuguese">Portuguese</option>
+                    <option value="russian">Russian</option>
+                </select>
+            </div>
+
+            <div class="optionsElement">
+                <label class="optElLeft" for="cmbGPTModel">GPT Model:</label>
+                <select id="cmbGPTModel" name="cmbGPTModel" title="Which OpenAI model to use:">
+                    <option value="curie" title="curie: cost-effective, but with lower capabilities.">Curie</option>
+                    <option value="davinci" title="davinci: powerful, but more expensive.">DaVinci</option>
+                </select>
+            </div>
+            <div class="optionsElement">
+                <div class="optElLeft">
+                    <input type="checkbox" id="chkSetMaxNumWords" name="chkSetMaxNumWords" />
+                    <label for="chkSetMaxNumWords">Limit words number:</label>
+                </div>
+                <input type="number" id="iiMaxNumWords" name="iiMaxNumWords" min="1" max="2040"
+                    title="Max number of words in the result." />
+            </div>
+            <div class="optionsElement">
+                <label class="optElLeft" for="diTemperature">Temperature:</label>
+                <input type="number" id="diTemperature" name="diTemperature" min="0.0" max="1.0" step="0.1"
+                    title="Randomness of solution: A higher temperature will produce more random and creative output, while a lower temperature will produce more predictable and conservative output." />
+            </div>
+            <div class="button-group optionsGroup">
+                <button class="button-8" id="btnSaveOptions">Save Options</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
