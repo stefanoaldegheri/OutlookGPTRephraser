@@ -1,6 +1,6 @@
 # Outlook GPT Rephraser Add-in
 
-This is a plugin for Microsoft Outlook that allows users to rephrase a selected text using the OpenAI language model.
+This is an add-in for Microsoft Outlook that allows users to rephrase a selected text using the OpenAI language model.
 
 ## How to install
 
@@ -28,7 +28,22 @@ https://stefanoaldegheri.github.io/OutlookGPTRephraser/manifest.xml
 5. Click "Rephrase" and review result.
 6. Click "Update Selection" to replace the text in the mail.
 
+## Developer instructions
 
+1. Follow instructions at [Build yor first Outlook add-in](https://learn.microsoft.com/en-us/office/dev/add-ins/quickstarts/outlook-quickstart?tabs=yeomangenerator)
+2. Clone this repository
+3. Execute in Powershell
+```bash
+ cd repository-folder
+ npm install office-addin-debugging
+ code .
+```
+4. To sideload the add-in, replace the content in the '**manifest.xml**' file with the content found in the '**manifest_localhost.xml**' file.
+5. Update code in webpack.config.js
+```bash
+const urlDev = "https://localhost:3000/";
+const urlProd = "https://localhost:3000/";
+```
 
 ## License
 
